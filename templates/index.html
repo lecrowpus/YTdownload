@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Downloader</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyBsm9aY5PNIpkDxhFnoFqNGgFt9U8tbvW" crossorigin="anonymous">
+    <style>
+        #loading {
+            display: none;
+        }
+
+        .spinner {
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-left: 4px solid #3498db;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <span class="main-container"> 
+        <header class="header"> Download your favourite <br /> Youtube Videos ! </header> 
+        <div class="subheader">enter your video or playlist link down bellow</div>
+        <span class="input-section">
+          <label for="video-url" class="label">Video URL</label> 
+          <input id="video-url" class="input" type="text" aria-label="Video URL" />
+        </span>
+        <span class="input-section">
+          <label for="playlist-url" class="label">Playlist URL</label>
+          <input id="playlist-url" class="input" type="text" aria-label="Playlist URL" />
+        </span>
+        <button class="download-button">Download</button>
+      </span>
+      
+      <style> 
+        .main-container { 
+          background: linear-gradient( 180deg, #2c0034 0%, rgba(255, 255, 255, 0) 100% ); 
+          mix-blend-mode: overlay; 
+          display: flex; 
+          max-width: 392px; 
+          flex-direction: column; 
+          padding: 23px 56px 50px 25px; 
+        } 
+      
+        .header { 
+          color: #b853f5; 
+          backdrop-filter: blur(5px); 
+          align-self: center; 
+          max-width: 253px; 
+          font: italic 900 20px Inter, sans-serif; 
+        } 
+      
+        .subheader { 
+          color: #fff; 
+          align-self: center; 
+          margin-top: 24px; 
+          font: 300 12px Inter, sans-serif; 
+        } 
+      
+        .input-section { 
+          display: flex; 
+          margin-top: 31px; 
+          align-items: center; 
+          justify-content: space-between; 
+          gap: 20px; 
+        } 
+      
+        .label { 
+          color: #fff; 
+          flex-grow: 1; 
+          white-space: nowrap; 
+          margin: auto 0; 
+          font: 700 12px Inter, sans-serif; 
+        } 
+      
+       .input { 
+          border-radius: 5px; 
+          background-color: #c3c0c0; 
+          align-self: stretch; 
+          display: flex; 
+          width: 225px; 
+          height: 18px; 
+          flex-direction: column; 
+        } 
+      
+        .download-button { 
+          color: #fff; 
+          white-space: nowrap; 
+          border-radius: 10px; 
+          background-color: rgba( 148.32885593175888, 42.59411081671715, 254.06362384557724, 1 ); 
+          align-self: center; 
+          justify-content: center; 
+          margin: 40px 0 37px; 
+          padding: 8px 17px; 
+          font: italic 900 12px Inter, sans-serif; 
+        }
+      </style>
+    <!-- <div class="container mt-5">
+        <h1 class="mb-4">YouTube Downloader</h1>
+        <div id="loading">
+            <div class="spinner"></div>
+            <p class="lead">Downloading...</p>
+        </div>
+        <form id="downloadForm" action="/download_video" method="post">
+            <div class="form-group">
+                <label for="video_url">Enter Video URL:</label>
+                <input type="text" class="form-control" name="video_url" required>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="downloadVideo()">Download Video</button>
+        </form>
+        <form id="playlistForm" action="/download_playlist" method="post" class="mt-4">
+            <div class="form-group">
+                <label for="playlist_url">Enter Playlist URL:</label>
+                <input type="text" class="form-control" name="playlist_url" required>
+            </div>
+            <button type="button" class="btn btn-success" onclick="downloadPlaylist()">Download Playlist</button>
+        </form>
+    </div>
+
+    <script>
+        function downloadVideo() {
+            document.getElementById("loading").style.display = "block";
+            document.getElementById("downloadForm").submit();
+        }
+
+        function downloadPlaylist() {
+            document.getElementById("loading").style.display = "block";
+            document.getElementById("playlistForm").submit();
+        }
+    </script>
+
+    <!-- Add Bootstrap JS and Popper.js if needed -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js" integrity="sha384-5Y4jHFXOuB6R/Dt6UG1T/9QaCr8Uz1NlS/Nlq+sqQl1S0BVoJ+spj+bKScQpG8C" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyBsm9aY5PNIpkDxhFnoFqNGgFt9U8tbvW" crossorigin="anonymous"></script> -->
+
+</body>
+</html>
+      
